@@ -1,0 +1,175 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d1b2a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card Box */
+.card {
+  max-width: 400px;      
+  width: 100%;           
+  padding: 2rem;         
+  border-radius: 12px;   
+  margin: 0 auto;        
+}
+
+/* Card Background */
+.card {
+  background-color: #1b263b;   /* warna dasar card */
+}
+
+/* Card Shadow (efek bayangan) */
+.card {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);  /* bikin timbul */
+}
+
+.card label.ntah {
+	font-size: 14px;
+	color: #c8c7c7;
+	margin-bottom: 10px;
+}
+
+.card h2.judul {
+	font-size: 25px;
+	color: #ffffff;
+    margin-top: 1px;
+	margin-bottom: 15px;
+}
+
+/* Logo Area */
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.icon {
+  background: linear-gradient(135deg, #6a5acd, #00b4d8);
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  margin-right: 12px;
+}
+.logo h2 {
+  margin: 0;
+}
+.logo p {
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Welcome Text */
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+.desc {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+.login-form label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 12px;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* Options (checkbox + lupa password) */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 1rem;
+}
+.options a {
+  color: #7f5af0;
+  text-decoration: none;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6a5acd, #00b4d8);
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+/* Register link */
+.register {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 13px;
+}
+.register a {
+  color: #00b4d8;
+  text-decoration: none;
+}
+
+/* snackbar */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 14px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-size: 16px;
+}
+
+/* Saat snackbar muncul */
+#snackbar.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animasi muncul dan hilang */
+@keyframes fadein {
+  from { bottom: 0; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 0; opacity: 0; }
+}

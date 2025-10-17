@@ -1,0 +1,161 @@
+.container {
+  display: flex;
+  flex-direction: row; /* default: desktop → gambar kiri, teks kanan */
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gambar-tiket img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* HP (layar kecil) → gambar di atas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* tumpuk ke atas bawah */
+    text-align: center;
+  }
+
+  .gambar-tiket img {
+    max-width: 100%;
+  }
+}
+
+/* ===================== */
+/* Global                */
+/* ===================== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f6fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ===================== */
+/* Navbar                */
+/* ===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #4b3cc4, #00b4d8);
+  padding: 12px 25px;
+  color: #fff;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  background: #2d2a6e;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+.title {
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 100;
+}
+nav a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===================== */
+/* Container             */
+/* ===================== */
+.container {
+  padding: 50px;
+}
+
+/* ===================== */
+/* Card                  */
+/* ===================== */
+.card {
+  max-width: 70pc;
+  margin: 0 auto 24px auto;
+  background: #ffffff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-tiket {
+  max-width: 34.51pc;
+  margin: 0 auto 24px auto;
+  background: #ffffff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* ===================== */
+/* Button                */
+/* ===================== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  padding: 9px 11px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: #5b3cc4;
+}
+.plus-plus {
+  margin-top: 2px;
+  margin-right: 8px;
+  font-size: 15px;
+  align-items: center;
+}
+
+.judul {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 1px;
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.deskripsi {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.isi {
+  font-size: 15px;
+  text-align: justify;
+  margin-bottom: 15px;
+  margin-top: -10px;
+}
+
+.spesifikasi-list {
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 15px;
+  margin-top: -10px;
+}

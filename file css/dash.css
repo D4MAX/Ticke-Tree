@@ -1,0 +1,247 @@
+/* Default untuk desktop */
+.container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 200px;
+}
+
+/* Override khusus untuk mobile (layar <= 600px) */
+@media (max-width: 800px) {
+  .container {
+    width: 90%;
+    padding: 1000px;
+    margin: 0px auto -5px -17PX;
+  }
+}
+
+
+/* ===================== */
+/* Global                */
+/* ===================== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f6fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ===================== */
+/* Navbar                */
+/* ===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #4b3cc4, #00b4d8);
+  padding: 12px 25px;
+  color: #fff;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  background: #2d2a6e;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+.title {
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 100;
+}
+nav a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===================== */
+/* Container             */
+/* ===================== */
+.container {
+  padding: 50px;
+}
+
+/* ===================== */
+/* Card                  */
+/* ===================== */
+.card {
+    max-width: 70pc;
+    margin: 0 auto 24px auto;
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.card h2.judul{
+    text-align: center; /* membuat teks berada di tengah */
+    margin: 0; /* optional, agar jarak default heading tidak mengganggu */
+}
+
+.card admin.card{
+    padding: 1rem;
+    padding-bottom: 20px;
+}
+
+.card-tiket {
+    max-width: 34.51pc;
+    margin: 0 auto 24px auto;
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+
+/* ===================== */
+/* Button                */
+/* ===================== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  padding: 9px 11px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: #5b3cc4;
+}
+.plus-plus {
+  margin-top: 2px;
+  margin-right: 8px;
+  font-size: 15px;
+  align-items: center;
+}
+
+.new-tiket{
+  display: inline-flex;
+  align-items: center;
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  padding: 9px 11px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+.new-tiket:hover {
+  background: rgb(62, 44, 113);
+}
+.plus {
+  margin-top: 2px;
+  margin-right: 8px;
+  font-size: 15px;
+}
+/* ===================== */
+/* Table                 */
+/* ===================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 9px;
+  text-align: left;
+}
+table th {
+  background: #f9fafc;
+}
+
+/* Icon pada tabel */
+.icon-action {
+  transition: transform 0.3s;
+}
+.icon-action:hover {
+  transform: rotate(90deg);
+}
+
+body {
+  background-color: #ebebeb; 
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+
+.form-container {
+  width: 300px;
+  margin: 100px auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e2e4e8; 
+  color: #1c1c1c;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #8d8d8d; 
+}
+
+input:focus {
+  outline: 2px solid #3b82f6; 
+}
+
+.judul {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 1px;
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.deskripsi {
+  font-size: 18px;
+  text-align: left; 
+  margin-bottom: 20px;
+}
+
+.isi {
+  font-size: 15px;
+  text-align: justify; 
+  margin-bottom: 15px;
+  margin-top: -10px;
+}
+
+.spesifikasi-list {
+  font-size: 15px;
+  text-align: left; 
+  margin-bottom:15px;
+  margin-top: -10px;
+}
