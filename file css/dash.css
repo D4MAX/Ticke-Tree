@@ -165,7 +165,7 @@ table {
 }
 table th, table td {
   border: 1px solid #ddd;
-  padding: 9px;
+  padding: 5px;
   text-align: left;
 }
 table th {
@@ -173,12 +173,6 @@ table th {
 }
 
 /* Icon pada tabel */
-.icon-action {
-  transition: transform 0.3s;
-}
-.icon-action:hover {
-  transform: rotate(90deg);
-}
 
 body {
   background-color: #ebebeb; 

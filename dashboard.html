@@ -11,12 +11,7 @@
     <header class="navbar">
       <div class="logo">
         <div class="icon">TT</div>
-        <span
-          onclick="window.location.href='home.html'"
-          style="cursor: pointer"
-          class="title"
-          >TickeTree Dashboard</span
-        >
+        <span class="title">TickeTree Dashboard</span>
       </div>
       <nav>
         <a href="#">My Ticket</a>
@@ -32,13 +27,8 @@
         <p>
           Kelola acara komunitasmu, cek peserta, dan pantau tiket dengan mudah
         </p>
-        <button class="btn-primary">
-          <span
-            onclick="window.location.href='buat tiket.html'"
-            style="cursor: pointer"
-            class="plus"
-            >+ Buat acara baru</span
-          >
+        <button class="btn-primary" id="buatTiketBtn">
+          <span class="plus">+ Buat acara baru</span>
         </button>
       </section>
       <!-- Event Table -->
@@ -68,6 +58,13 @@
                   alt="Kelola"
                   class="icon-action"
                 />
+                <img
+                  src="gambar/delete.png"
+                  width="24"
+                  height="24"
+                  alt="hapus"
+                  class="icon-action"
+                />
               </td>
             </tr>
             <tr>
@@ -83,12 +80,19 @@
                   alt="Kelola"
                   class="icon-action"
                 />
+                <img
+                  src="gambar/delete.png"
+                  width="24"
+                  height="24"
+                  alt="hapus"
+                  class="icon-action"
+                />
               </td>
             </tr>
           </tbody>
         </table>
       </section>
     </main>
-    <script src="dash.js"></script>
+    <script src="file js/dash.js"></script>
   </body>
 </html>

@@ -12,17 +12,14 @@ function proses() {
   let password = document.getElementById("Password").value.trim();
   let hasil = document.getElementById("hasil");
 
-  // Validasi input kosong
+  // ================== ALERT BOX ==================
   if (!User || !password) {
-    hasil.innerHTML = "<b>Login Gagal!</b><br>Isi semua data!";
-    hasil.className = "error";
+    alert("Login Gagal!\nIsi semua data!");
     return;
   }
 
-  // Validasi panjang password
   if (password.length < 8) {
-    hasil.innerHTML = "<b>Login Gagal!</b><br>Password minimal 8 karakter!";
-    hasil.className = "error";
+    alert("Login Gagal!\nPassword minimal 8 karakter!");
     return;
   }
 

@@ -15,13 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Validasi input kosong
     if (!nama || !user || !email || !wa || !pass) {
-      hasil.innerHTML = "<b>Gagal Daftar!</b><br>Semua data wajib diisi.";
+      alert("Daftar Gagal!\nSemua Data Wajib Diisi!");
       return;
     }
-
     // Validasi panjang password
     if (pass.length < 8) {
-      hasil.innerHTML = "<b>Gagal Daftar!</b><br>Password minimal 8 karakter!";
+      alert("Daftar Gagal!\nPassword minimal 8 karakter!");
       return;
     }
 
@@ -29,8 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("registeredUser", user);
     localStorage.setItem("registeredPass", pass);
 
-    hasil.innerHTML =
-      "<b>Berhasil Daftar!</b><br>Silakan login menggunakan akun kamu...";
+    alert(
+      "Berhasil Daftar! \nSilahkan Login Menggunakan Akun Yang Telah Dibuat!"
+    );
 
     // Redirect ke halaman login setelah 2 detik
     setTimeout(() => {
