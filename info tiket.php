@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TickeTree Dashboard</title>
+    <link rel="stylesheet" href="file css/infootiket.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">
+        <div class="icon">TT</div>
+        <span
+          onclick="window.location.href='dashboard.html'"
+          style="cursor: pointer"
+          class="title"
+          >TickeTree Dashboard</span
+        >
+      </div>
+      <nav>
+        <a href="login.html">Logout</a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <!-- Welcome Card -->
+      <section class="card-tiket">
+        <img
+          src="gambar/tur itn.jpg"
+          alt="Deskripsi gambar"
+          width="550"
+          height="700"
+        />
+      </section>
+      <!-- Event Table -->
+      <section class="card">
+        <p class="judul">Turnamen Mobile Legends</p>
+        <p class="deskripsi">Deskripsi Event</p>
+        <p class="isi">
+          Turnamen Mobile Legends adalah kompetisi seru yang mempertemukan para
+          pemain terbaik dari berbagai komunitas untuk bersaing memperebutkan
+          gelar juara. Acara ini dirancang untuk memberikan pengalaman bermain
+          yang mendebarkan, dengan hadiah menarik bagi para pemenang dan
+          kesempatan untuk menunjukkan keterampilan strategi serta kerja sama
+          tim. Bergabunglah dalam turnamen ini dan buktikan bahwa tim Anda
+          adalah yang terbaik di medan pertempuran Mobile Legends!
+        </p>
+        <p class="spesifikasi-list">Spesifikasi Event</p>
+        <ul class="spesifikasi-list" type="disc">
+          <li>Kategori Event: Tournamen, Gaming</li>
+          <li>Tanggal Event : 12/11/3030</li>
+          <li>Kuota Event : 4 Team</li>
+          <li>Status Event : Open Register</li>
+          <li>Price Tiket : 60K/Team</li>
+        </ul>
+
+        <button class="btn-primary">
+          <span
+            onclick="window.location.href='buat tiket.html'"
+            style="cursor: pointer"
+            class="plus-plus"
+            >Mulai Register</span
+          >
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
