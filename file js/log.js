@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById("login");
-  button.addEventListener("click", function (e) {
-    e.preventDefault();
-    proses();
+
+  button.addEventListener("click", function () {
+    proses(); // panggil fungsi proses saat tombol diklik
   });
 });
 
 function proses() {
-  console.log("Fungsi dipanggil!"); // Debug
   let User = document.getElementById("User").value.trim();
   let password = document.getElementById("Password").value.trim();
-  let hasil = document.getElementById("hasil");
 
-  // ================== ALERT BOX ==================
+  // ================== VALIDASI DASAR DI JS ==================
   if (!User || !password) {
     alert("Login Gagal!\nIsi semua data!");
     return;
@@ -23,17 +21,11 @@ function proses() {
     return;
   }
 
-  // Simpan user di localStorage
-  localStorage.setItem("loggedInUser", User);
+  // ================== HILANGKAN LOCAL STORAGE ==================
+  // localStorage.setItem("loggedInUser", User);
 
-  // Kosongkan input password
-  document.getElementById("Password").value = "";
-
-  // Redirect setelah 2 detik
-  setTimeout(() => {
-    console.log("Redirect ke dashboard.html...");
-    window.location.href = "dashboard.html";
-  }, 2000);
+  // ================== EFEK SNACKBAR + SUBMIT ==================
+  // myFunction();
 }
 
 function myFunction() {
@@ -41,5 +33,6 @@ function myFunction() {
   x.className = "show";
   setTimeout(function () {
     x.className = x.className.replace("show", "");
-  }, 3000);
+    document.querySelector(".login-form").submit(); // kirim form ke PHP
+  }, 1000); // delay 1 detik sebelum kirim ke PHP
 }

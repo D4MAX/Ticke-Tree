@@ -7,15 +7,26 @@
     <link rel="stylesheet" href="file css/dash.css" />
   </head>
   <body>
+    <?php
+session_start();
+
+// Cek apakah user sudah login
+if (!isset($_SESSION['loggedInUser'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$user = $_SESSION['loggedInUser'];
+?>
     <!-- NAVBAR -->
     <header class="navbar">
       <div class="logo">
         <div class="icon">TT</div>
-        <span class="title">TickeTree Dashboard</span>
+        <span class="title">TickeTree</span>
       </div>
       <nav>
         <a href="#">My Ticket</a>
-        <a href="login.html">Logout</a>
+        <a href="login.php">Logout</a>
       </nav>
     </header>
 
