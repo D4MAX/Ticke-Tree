@@ -12,14 +12,13 @@
       <div class="logo">
         <div class="icon">TT</div>
         <span
-          onclick="window.location.href='home.html'"
+          onclick="window.location.href='dashboard.html'"
           style="cursor: pointer"
           class="title"
           >TickeTree Dashboard</span
         >
       </div>
       <nav>
-        <a href="dashboard.html">My Ticket</a>
         <a href="login.html">Logout</a>
       </nav>
     </header>
