@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TickeTree Dashboard</title>
-    <link rel="stylesheet" href="dash.css" />
+    <link rel="stylesheet" href="file css/dash.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -28,7 +28,7 @@
     <main class="container">
       <!-- Welcome Card -->
       <section class="card">
-        <img src="mole.jpg" alt="Deskripsi gambar" width="865" height="150" />
+        <img src="gambar/tur itn.jpg" alt="Deskripsi gambar" width="865" height="150" />
       </section>
       <!-- Event Table -->
       <section class="card">
