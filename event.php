@@ -4,104 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TickeTree Dashboard</title>
-    <link rel="stylesheet" href="file css/dash.css" />
+    <link rel="stylesheet" href="file css/event.css" />
   </head>
   <body>
-    <?php
-session_start();
-
-// Cek apakah user sudah login
-if (!isset($_SESSION['loggedInUser'])) {
-    header("Location: login.php");
-    exit();
-}
-
-$user = $_SESSION['loggedInUser'];
-?>
     <!-- NAVBAR -->
     <header class="navbar">
       <div class="logo">
         <div class="icon">TT</div>
-        <span class="title">TickeTree</span>
+        <span
+          onclick="window.location.href='dashboard.html'"
+          style="cursor: pointer"
+          class="title"
+          >TickeTree</span
+        >
       </div>
       <nav>
-        <a href="#">My Ticket</a>
-        <a href="login.php">Logout</a>
+        <a href="tiket.php">My Ticket</a>
+        <a href="login.php">Login</a>
       </nav>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="container">
-      <!-- Welcome Card -->
-      <section class="card">
-        <h2 id="welcomeUser"></h2>
-        <p>
-          Kelola acara komunitasmu, cek peserta, dan pantau tiket dengan mudah
+    <main class="utama">
+      <section class="event">
+        <!-- Welcome Card -->
+        <h2 class="judul">TickeTree</h2>
+        <p class="desk">
+          Nikmati event-event seru ini dan temukan pengalaman tak terlupakan
+          bersama komunitasmu hari ini!
         </p>
-        <button class="btn-primary" id="buatTiketBtn">
-          <span class="plus">+ Buat acara baru</span>
-        </button>
-      </section>
-      <!-- Event Table -->
-      <section class="card">
-        <h3>Acara Terbaru</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Nama Event</th>
-              <th>Tanggal</th>
-              <th>Peserta</th>
-              <th>Status</th>
-              <th>Kelola</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Open Mic Stand-up</td>
-              <td>12 Okt 2025</td>
-              <td>45</td>
-              <td>Sedang Berjalan</td>
-              <td>
-                <img
-                  src="gambar/setting.png"
-                  width="24"
-                  height="24"
-                  alt="Kelola"
-                  class="icon-action"
-                />
-                <img
-                  src="gambar/delete.png"
-                  width="24"
-                  height="24"
-                  alt="hapus"
-                  class="icon-action"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td><a href="info tiket.html">Turnamen Mobile Legends</a></td>
-              <td>20 Okt 2025</td>
-              <td>32</td>
-              <td>Aktif</td>
-              <td>
-                <img
-                  src="gambar/setting.png"
-                  width="24"
-                  height="24"
-                  alt="Kelola"
-                  class="icon-action"
-                />
-                <img
-                  src="gambar/delete.png"
-                  width="24"
-                  height="24"
-                  alt="hapus"
-                  class="icon-action"
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+
+        <!-- Event Table -->
+        <h3 class="header">Acara Tersedia</h3>
+        <div class="event-list">
+          <div class="card-tiket">
+            <img src="gambar/tur itn.jpg" alt="mole" class="poster" />
+          </div>
+          <div class="card-tiket">
+            <img src="gambar/image.png" alt="shopee" class="poster" />
+          </div>
+          <div class="card-tiket">
+            <img src="gambar/indomaret.jpg" alt="indomaret" class="poster" />
+          </div>
+          <div class="card-tiket">
+            <img src="gambar/porprov.jpg" alt="porprov" class="poster" />
+          </div>
+        </div>
       </section>
     </main>
     <script src="file js/dash.js"></script>

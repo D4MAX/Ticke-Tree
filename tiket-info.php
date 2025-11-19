@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TickeTree Dashboard</title>
-    <link rel="stylesheet" href="file css/dash.css" />
+    <link rel="stylesheet" href="file css/infootiket.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -12,23 +12,27 @@
       <div class="logo">
         <div class="icon">TT</div>
         <span
-          onclick="window.location.href='home.html'"
+          onclick="window.location.href='dashboard.html'"
           style="cursor: pointer"
           class="title"
           >TickeTree Dashboard</span
         >
       </div>
       <nav>
-        <a href="#">My Ticket</a>
-        <a href="home.html">Logout</a>
+        <a href="login.html">Logout</a>
       </nav>
     </header>
 
     <!-- MAIN CONTENT -->
     <main class="container">
       <!-- Welcome Card -->
-      <section class="card">
-        <img src="gambar/tur itn.jpg" alt="Deskripsi gambar" width="865" height="150" />
+      <section class="card-tiket">
+        <img
+          src="gambar/tur itn.jpg"
+          alt="Deskripsi gambar"
+          width="550"
+          height="700"
+        />
       </section>
       <!-- Event Table -->
       <section class="card">
@@ -43,13 +47,13 @@
           tim. Bergabunglah dalam turnamen ini dan buktikan bahwa tim Anda
           adalah yang terbaik di medan pertempuran Mobile Legends!
         </p>
-        <p class="spesifikasi">Spesifikasi Event</p>
+        <p class="spesifikasi-list">Spesifikasi Event</p>
         <ul class="spesifikasi-list" type="disc">
           <li>Kategori Event: Tournamen, Gaming</li>
           <li>Tanggal Event : 12/11/3030</li>
-          <li>Kuota Event   : 4 Team</li>
+          <li>Kuota Event : 4 Team</li>
           <li>Status Event : Open Register</li>
-          <li>Price Tiket   : 60K/Team</li>
+          <li>Price Tiket : 60K/Team</li>
         </ul>
 
         <button class="btn-primary">

@@ -17,6 +17,11 @@ if (!isset($_SESSION['loggedInUser'])) {
 }
 
 $user = $_SESSION['loggedInUser'];
+include 'koneksi.php';
+
+// Ambil data tiket terbaru
+$result = $koneksi->query("SELECT * FROM tiket ORDER BY id_tiket DESC");
+
 ?>
     <!-- NAVBAR -->
     <header class="navbar">
@@ -26,7 +31,7 @@ $user = $_SESSION['loggedInUser'];
       </div>
       <nav>
         <a href="#">My Ticket</a>
-        <a href="login.php">Logout</a>
+        <a href="logout.php">Logout</a>
       </nav>
     </header>
 
@@ -34,9 +39,9 @@ $user = $_SESSION['loggedInUser'];
     <main class="container">
       <!-- Welcome Card -->
       <section class="card">
-        <h2 id="welcomeUser"></h2>
+        <h2 id="welcomeUser">Selamat Datang, <?php echo htmlspecialchars($user); ?></h2>
         <p>
-          Kelola acara komunitasmu, cek peserta, dan pantau tiket dengan mudah
+          Nikmati event-event seru ini dan temukan pengalaman tak terlupakan bersama komunitasmu hari ini! 
         </p>
         <button class="btn-primary" id="buatTiketBtn">
           <span class="plus">+ Buat acara baru</span>
@@ -100,6 +105,22 @@ $user = $_SESSION['loggedInUser'];
                 />
               </td>
             </tr>
+            <?php while ($row = $result->fetch_assoc()) { ?>
+    <tr>
+      <td><?php echo htmlspecialchars($row['nama_event']); ?></td>
+      <td><?php echo htmlspecialchars($row['tanggal_event']); ?></td>
+      <td><?php echo htmlspecialchars($row['kuota_event']); ?></td>
+      <td><?php echo htmlspecialchars($row['status_event']); ?></td>
+      <td>
+        <img src="gambar/setting.png" width="24" height="24" class="icon-action" />
+        <a href="hapus_tiket.php?id=<?php echo $row['id_tiket']; ?>" 
+   onclick="return confirm('Yakin ingin menghapus tiket ini?')">
+  <img src="gambar/delete.png" width="24" height="24" class="icon-action" />
+</a>
+
+      </td>
+    </tr>
+  <?php } ?>
           </tbody>
         </table>
       </section>

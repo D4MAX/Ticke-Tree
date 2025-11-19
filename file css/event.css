@@ -66,42 +66,40 @@ nav a:hover {
 }
 
 /* ===================== */
-/* Container             */
-/* ===================== */
-.container {
-  padding: 50px;
-}
-
-/* ===================== */
 /* Card                  */
 /* ===================== */
-.card {
-  max-width: 70pc;
-  margin: 0 auto 24px auto;
-  background: #ffffff;
-  padding: 1.2rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-.card h2.judul {
-  text-align: center; /* membuat teks berada di tengah */
-  margin: 0; /* optional, agar jarak default heading tidak mengganggu */
+.header {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  paddintg-top: 20px;
 }
 
-.card admin.card {
-  padding: 1rem;
-  padding-bottom: 20px;
+.judul {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.card-tiket {
-  max-width: 34.51pc;
-  margin: 0 auto 24px auto;
-  background: #ffffff;
-  padding: 1.2rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+.desk {
+  font-size: 20px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0px;
+}
+
+.event {
+  padding-top: 0px;
+  margin: 50px;
+}
+.acara {
+  font-size: 17px;
+  text-align: left;
+  margin-right: 5px;
 }
 
 /* ===================== */
@@ -124,28 +122,37 @@ nav a:hover {
 .btn-primary:hover {
   background: #5b3cc4;
 }
-
-.plus {
+.plus-plus {
   margin-top: 2px;
   margin-right: 8px;
   font-size: 15px;
+  align-items: center;
 }
+
 /* ===================== */
 /* Table                 */
 /* ===================== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
+.event-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-table th,
-table td {
-  border: 1px solid #ddd;
-  padding: 5px;
-  text-align: left;
+
+.card-tiket {
+  max-width: 15pc;
+  max-height: 26.5pc;
+  background: #ffffff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
-table th {
-  background: #f9fafc;
+
+.poster {
+  width: 15pc;
+  height: 25pc;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 /* Icon pada tabel */
@@ -188,7 +195,7 @@ input:focus {
   outline: 2px solid #3b82f6;
 }
 
-.judul {
+/* .judul {
   text-align: left;
   margin-bottom: 20px;
   margin-top: 1px;
@@ -198,20 +205,20 @@ input:focus {
 
 .deskripsi {
   font-size: 18px;
-  text-align: left;
+  text-align: left; 
   margin-bottom: 20px;
 }
 
 .isi {
   font-size: 15px;
-  text-align: justify;
+  text-align: justify; 
   margin-bottom: 15px;
   margin-top: -10px;
 }
 
 .spesifikasi-list {
   font-size: 15px;
-  text-align: left;
-  margin-bottom: 15px;
+  text-align: left; 
+  margin-bottom:15px;
   margin-top: -10px;
-}
+} */

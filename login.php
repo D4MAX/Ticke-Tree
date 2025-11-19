@@ -9,23 +9,50 @@
   <body>
 <?php
 session_start();
+include "koneksi.php";
 
 if (isset($_POST['submit'])) {
-    $user = $_POST['username'];
-    $pass = $_POST['password'];
 
-if ($user === 'admin' && $pass === 'admin') {
-        $_SESSION['loggedInUser'] = $user;
-        echo "<script>alert('Login Berhasil! Selamat datang, $user');</script>";
-        echo "<meta http-equiv='refresh' content='1.5;url=dashboard.php'>";
-        exit();
-    } elseif (empty($user) || empty($pass)) {
-        echo "<script>alert('Login Gagal! Semua data wajib diisi!');</script>";
-    }else {
-        echo "<script>alert('Login Gagal! Username atau password salah.');</script>";
-      }
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if (empty($username) || empty($password)) {
+        echo "<script>alert('Semua data wajib diisi!');</script>";
+    } else {
+
+        // CARI USER DI DATABASE
+        $result = mysqli_query($koneksi, "SELECT * FROM userj WHERE username='$username'");
+        $data = mysqli_fetch_assoc($result);
+
+        if ($data) {
+            // COCOKKAN PASSWORD
+            if (password_verify($password, $data['password'])) {
+
+                // SIMPAN SESSION
+                $_SESSION['id_user'] = $data['id_user'];
+                $_SESSION['nama'] = $data['nama'];
+                $_SESSION['username'] = $data['username'];
+                $_SESSION['role'] = $data['role'];
+
+                // REDIRECT SESUAI ROLE
+                if ($data['role'] == 'admin') {
+                    echo "<script>alert('Login Admin Berhasil!');</script>";
+                    echo "<meta http-equiv='refresh' content='1;url=admin_dashboard.php'>";
+                } else {
+                    echo "<script>alert('Login User Berhasil!');</script>";
+                    echo "<meta http-equiv='refresh' content='1;url=event.php'>";
+                }
+
+            } else {
+                echo "<script>alert('Password salah!');</script>";
+            }
+        } else {
+            echo "<script>alert('Username tidak ditemukan!');</script>";
+        }
+    }
 }
 ?>
+
 
     <div class="container">
       <div class="card">
