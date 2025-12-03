@@ -1,29 +1,3 @@
-.container {
-  display: flex;
-  flex-direction: row; /* default: desktop → gambar kiri, teks kanan */
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.gambar-tiket img {
-  max-width: 400px;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* HP (layar kecil) → gambar di atas */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* tumpuk ke atas bawah */
-    text-align: center;
-  }
-
-  .gambar-tiket img {
-    max-width: 100%;
-  }
-}
-
 /* ===================== */
 /* Global                */
 /* ===================== */
@@ -61,7 +35,7 @@ body {
 .title {
   font-weight: bold;
   font-size: 16px;
-  padding-left: 100;
+  cursor: pointer;
 }
 nav a {
   color: #fff;
@@ -69,40 +43,80 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 nav a:hover {
   text-decoration: underline;
 }
 
 /* ===================== */
-/* Container             */
+/* Layout Main Flex      */
 /* ===================== */
-.container {
-  padding: 50px;
+.main-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* responsif: tumpuk di mobile */
+  padding: 20px;
 }
 
 /* ===================== */
-/* Card                  */
+/* Gambar Tiket          */
+/* ===================== */
+.card-tiket {
+  max-width: 20pc; /* diperbesar */
+  max-height: 35pc; /* diperbesar */
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+.card-tiket img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ===================== */
+/* Deskripsi             */
 /* ===================== */
 .card {
-  max-width: 70pc;
-  margin: 0 auto 24px auto;
+  text-align: center;
+  min-width: 30%;
   background: #ffffff;
   padding: 1.2rem;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
 }
 
-.card-tiket {
-  max-width: 34.51pc;
-  margin: 0 auto 24px auto;
-  background: #ffffff;
-  padding: 1.2rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+.judul {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.deskripsi {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.isi {
+  text-align: center;
+  font-size: 19px;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.spesifikasi-list {
+  text-align: center;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 12px;
 }
 
 /* ===================== */
@@ -111,51 +125,43 @@ nav a:hover {
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   background: #7f5af0;
   color: #fff;
-  border: none;
-  padding: 9px 11px;
+  padding: 10px 16px; /* ruang tombol lebih lega */
   border-radius: 8px;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 16px;
   cursor: pointer;
-  margin-top: 5px;
-  transition: 0.3s;
+  text-decoration: none; /* jika a tag */
 }
+
 .btn-primary:hover {
   background: #5b3cc4;
 }
-.plus-plus {
-  margin-top: 2px;
-  margin-right: 8px;
-  font-size: 15px;
-  align-items: center;
+
+.btn-primary .icon-action {
+  margin-right: 15px; /* jarak antara ikon dan teks */
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.judul {
-  text-align: left;
-  margin-bottom: 20px;
-  margin-top: 1px;
-  font-size: 29px;
-  font-weight: bold;
+.btn-primary .plus-plus {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.deskripsi {
-  font-size: 18px;
-  text-align: left;
-  margin-bottom: 20px;
+.container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 200px;
 }
 
-.isi {
-  font-size: 15px;
-  text-align: justify;
-  margin-bottom: 15px;
-  margin-top: -10px;
-}
-
-.spesifikasi-list {
-  font-size: 15px;
-  text-align: left;
-  margin-bottom: 15px;
-  margin-top: -10px;
+/* Override khusus untuk mobile (layar <= 600px) */
+@media (max-width: 800px) {
+  .container {
+    width: 90%;
+    padding: 1000px;
+    margin: 0px auto -5px -17px;
+  }
 }

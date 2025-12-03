@@ -69,9 +69,7 @@ nav a:hover {
 /* Card                  */
 /* ===================== */
 .header {
-  margin-top: 25px;
-  margin-bottom: 5px;
-  paddintg-top: 20px;
+  margin-left: 20%;
 }
 
 .judul {
@@ -82,6 +80,13 @@ nav a:hover {
   padding-right: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.judul-tiket {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 12px 0 10px;
+  text-align: center;
 }
 
 .desk {
@@ -119,6 +124,21 @@ nav a:hover {
   margin-top: 5px;
   transition: 0.3s;
 }
+
+.btn-daftar {
+  min-width: 80%;
+  background: #3b82f6;
+  padding: 10px;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 5px;
+  display: flex; /* aktifkan flex */
+  justify-content: center; /* tengah horizontal */
+  align-items: center; /* tengah vertical */
+}
+
 .btn-primary:hover {
   background: #5b3cc4;
 }
@@ -141,7 +161,7 @@ nav a:hover {
 
 .card-tiket {
   max-width: 15pc;
-  max-height: 26.5pc;
+  min-height: 26.5pc;
   background: #ffffff;
   padding: 1.2rem;
   border-radius: 12px;

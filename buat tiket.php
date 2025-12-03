@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="file css/dash.css" />
   </head>
   <body>
-    <!-- NAVBAR -->
+    NAVBAR
     <header class="navbar">
       <div class="logo">
         <div class="icon">TT</div>
@@ -75,4 +75,4 @@
     </main>
     <script src="file js/buat tiket.js"></script>
   </body>
-</html>
+</html> 

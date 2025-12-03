@@ -130,6 +130,23 @@ nav a:hover {
   margin-right: 8px;
   font-size: 15px;
 }
+
+.dropdown-status {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.dropdown-status:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
 /* ===================== */
 /* Table                 */
 /* ===================== */

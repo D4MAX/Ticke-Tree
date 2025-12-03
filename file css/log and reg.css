@@ -17,34 +17,34 @@ body {
 
 /* Card Box */
 .card {
-  max-width: 400px;      
-  width: 100%;           
-  padding: 2rem;         
-  border-radius: 12px;   
-  margin: 0 auto;        
+  max-width: 400px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 0 auto;
 }
 
 /* Card Background */
 .card {
-  background-color: #1b263b;   /* warna dasar card */
+  background-color: #1b263b; /* warna dasar card */
 }
 
 /* Card Shadow (efek bayangan) */
 .card {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);  /* bikin timbul */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* bikin timbul */
 }
 
 .card label.ntah {
-	font-size: 14px;
-	color: #c8c7c7;
-	margin-bottom: 10px;
+  font-size: 14px;
+  color: #c8c7c7;
+  margin-bottom: 10px;
 }
 
 .card h2.judul {
-	font-size: 25px;
-	color: #ffffff;
-    margin-top: 1px;
-	margin-bottom: 15px;
+  font-size: 25px;
+  color: #ffffff;
+  margin-top: 1px;
+  margin-bottom: 15px;
 }
 
 /* Logo Area */
@@ -89,36 +89,33 @@ h1 {
   margin-bottom: 4px;
 }
 
-.login-form input[type="text"]
-{
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
-    margin-bottom: 12px;
-    background-color: #0f172a;
-    color: #ffffff;
-  }
-.login-form input[type="email"]
-  {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
-    margin-bottom: 12px;
-    background-color: #0f172a;
-    color: #ffffff;
-  }
-.login-form input[type="tel"]
-  {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
-    margin-bottom: 12px;
-    background-color: #0f172a;
-    color: #ffffff;
-  }
+.login-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 12px;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+.login-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 12px;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+.login-form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 12px;
+  background-color: #0f172a;
+  color: #ffffff;
+}
 .login-form input[type="password"] {
   width: 100%;
   padding: 10px;
@@ -195,11 +192,23 @@ button:hover {
 
 /* Animasi muncul dan hilang */
 @keyframes fadein {
-  from { bottom: 0; opacity: 0; }
-  to { bottom: 30px; opacity: 1; }
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @keyframes fadeout {
-  from { bottom: 30px; opacity: 1; }
-  to { bottom: 0; opacity: 0; }
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }

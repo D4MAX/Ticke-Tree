@@ -59,11 +59,12 @@
     <tr>
       <td>Status event</td>
       <td>
-        <select name="status_event">
+        <select name="status_event" class="dropdown-status">
           <option value="aktif">aktif</option>
           <option value="selesai">selesai</option>
           <option value="dibatalkan">dibatalkan</option>
         </select>
+
       </td>
     </tr>
 
